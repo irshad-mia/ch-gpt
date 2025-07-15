@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        header,
+        nav,
+        section,
+        footer {
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(45deg, #ff6f61, #ffcc00);
+            color: white;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffcc00;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            min-height: 300px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .donate {
+            background: #0e6ba8;
+            color: white;
+            text-align: center;
+        }
+
+        .discount {
+            background: #6a0572;
+            color: white;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+
+        input,
+        button,
+        select {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Support Our Cause</h1>
+        <p>Make a colorful impact with your donations!</p>
+    </header>
+
+    <nav>
+        <a href="#donate">Donate</a>
+        <a href="#discount">Discount Offers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="donate" class="donate">
+        <h2>Donate with Credit Card</h2>
+        <form id="donationForm">
+            <input type="text" placeholder="Full Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="number" placeholder="Donation Amount ($)" required><br>
+            <select required>
+                <option value="">Select Discount</option>
+                <option value="0">No Discount</option>
+                <option value="5">5% Discount</option>
+                <option value="10">10% Discount</option>
+            </select><br>
+            <button type="submit">Pay with Credit Card</button>
+        </form>
+    </section>
+
+    <section id="discount" class="discount">
+        <h2>Special Discounts</h2>
+        <p>Enjoy up to 10% off on your donation as our thank you!</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email us at support@nichecause.com or call 123-456-7890</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Niche Cause. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Redirecting to payment gateway...');
+            // Here, integrate with Stripe or PayPal API for real payments
+        });
+    </script>
+
+</body>
+
+</html>
